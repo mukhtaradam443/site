@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: linear-gradient(to right, red, blue);
+}
+header {
+  background-image: linear-gradient(to right, blue, red);
+  position: relative;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+li {
+  list-style: none;
+  margin: 20px 55px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.menu {
+  display: none;
+}
+
+header ul li:hover .menu {
+  display: flex;
+}
+header ul li:hover .menu ul {
+  position: absolute;
+  color: white;
+  display: block;
+  background-image: linear-gradient(to right, blue, red);
+  margin-top: 30px;
+}
+header ul li:hover .menu ul li {
+  border-bottom: 2px solid white;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+button {
+  padding: 20px 50px;
+  background-color: blue;
+  color: white;
+  border: none;
+  animation-name: moveTop;
+  animation-duration: 3s;
+}
+
+@keyframes moveTop {
+  0% {
+    transform: translateY(-40px);
+  }
+
+  40% {
+    transform: translateX(-70px);
+  }
+
+  80% {
+    transform: translateX(80px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+
+main {
+  display: flex;
+  margin-top: 50px;
+  animation-name: moveRight;
+  animation-duration: 3s;
+}
+.box {
+  background-image: linear-gradient(to right, gray, black);
+  margin: 10px;
+  color: white;
+  padding: 20px;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-40px);
+  }
+
+  40% {
+    transform: translateX(-70px);
+  }
+
+  80% {
+    transform: translateX(80px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
